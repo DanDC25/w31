@@ -22,17 +22,17 @@ basic.forever(function () {
 })
 
 
-basic.forever(function () {
-    Clean = "Clean!"
-    Dirty = "Dirty!"
-    radio.setGroup(1)
-    if (input.lightLevel() > 130) {
-        radio.sendString(Clean)
-    }
-    if (input.lightLevel() < 130) {
-        radio.sendString(Dirty)
-    }
-})
+// basic.forever(function () {
+//     Clean = "Clean!"
+//     Dirty = "Dirty!"
+//     radio.setGroup(1)
+//     if (input.lightLevel() > 130) {
+//         radio.sendString(Clean)
+//     }
+//     if (input.lightLevel() < 130) {
+//         radio.sendString(Dirty)
+//     }
+// })
 
 radio.onReceivedString(function (receivedString) {
     if (receivedString == Clean) {
@@ -59,7 +59,4 @@ radio.onReceivedString(function (receivedString) {
     }
 })
 
-input.onButtonPressed(Button.B, function () {
-    Starter = true
-})
 
